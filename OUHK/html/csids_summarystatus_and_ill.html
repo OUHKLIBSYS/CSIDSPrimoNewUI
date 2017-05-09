@@ -1,0 +1,45 @@
+﻿<div style="display:{{$ctrl.onlineaccess_display}}">
+<a href="{{$ctrl.onlineaccess_link}}" class="fulltextLink" style="color:green" target="_blank">
+	<md-icon md-svg-icon="primo-ui:link" aria-label="icon-link" style="height:15px;width:15px;min-height:15px;min-width:15px;"> </md-icon>
+	{{$ctrl.onlineaccess_text}}
+	<md-icon md-svg-icon="primo-ui:open-in-new" aria-label="icon-open-in-new" style="height:15px;width:15px;min-height:15px;min-width:15px;"> </md-icon>
+</a>
+<br>
+</div>
+
+<span id="csidssumava{{$ctrl.recordid}}" class="{{$ctrl.class}}" style="position:absolute">  {{$ctrl.summaryStatus}} </span>
+
+<br>
+
+<a  id="ill_link" ng-click="$ctrl.submitILL($ctrl.recordid)"> {{$ctrl.ill}} </a>
+
+<select name="{{'ill_vol_select' + $ctrl.recordid}}"
+         style="display:none;position:absolute" ng-model="ill_vol_select" ng-change="$ctrl.changeVol($ctrl.recordid)">
+	<option value="0" selected> {{$ctrl.selectVolStr}} </option>
+</select>
+
+<form style="display:none" method="post" name="{{'illform' + $ctrl.recordid}}"
+	 accept-charset="UTF-8" id="{{'illform' + $ctrl.recordid}}" target="{{'illform' + $ctrl.recordid}}">
+			<input name="func" type="hidden" value="new-ill-request-l">
+			<input name="request_type" type="hidden" value="BOOK">
+			<input name="BIB___FMT___" type="hidden" value="BK">
+			<input name="BIB___LDR___" type="hidden" value="^^^^^nam^a22^^^^^^a^4500">
+			<input name="BIB___008___" type="hidden" value="------b----------------r-----000-0-und-d">
+			<input name="ILLUNIT" type="hidden" value="">
+			<input name="Z40___MEDIA" type="hidden" value="L-PRINTED">
+			<input name="Z40_M_DATE_TO" type="hidden" value="+365"><input name="Z40___MEDIA" type="hidden" value="C-COPY">
+			<input name="Z40___MEDIA_SEND_METHOD" type="hidden" value="S">
+			<input type="hidden" name="Z40___COPYRIGHT_LETTER" value="Y">
+			<input name="COPYRIGHT_MANDATORY" type="hidden" value="Y">
+			<input name="UPDATE_COPYRIGHT_LETTER" type="hidden" value="Y">
+			<input name="author" type="hidden" value="{{$ctrl.author}}">
+			<input name="title" type="hidden" value="{{$ctrl.title}}">
+			<input name="sub_title" type="hidden" value="{{$ctrl.subtitle}}">
+			<input name="series" type="hidden" value="{{$ctrl.series}}">
+			<input name="year" type="hidden" value="{{$ctrl.year}}">
+			<input name="publisher" type="hidden" value="{{$ctrl.publisher}}">
+			<input name="publication_place" type="hidden" value="{{$ctrl.publish_place}}">
+			<input name="isbn" type="hidden" value="{{$ctrl.isbn}}">
+			<input name="volume" type="hidden" value="{{$ctrl.vol}}">
+			<input id="ill_source0" name="source" type="hidden" value="{{$ctrl.ill_source}}">
+</form>
