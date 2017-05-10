@@ -61,7 +61,7 @@ function convInnerHTMLtoSimpChin(obj){
 } //end convInnerHTMLtoSimpChin()
 
 function toSimpChin(str){
-	//Implement your codes to translated a string from Traditional Chinese to Simplified Chinese here.
-	//You may consider to use the free version (under GNU) of the function here https://github.com/stevendaniels/New-Tongwen-Tang
+	//Implement your codes here to translate a string from Traditional Chinese to Simplified Chinese.
+	//You may consider to use the free version (under GLP) of the function here https://github.com/stevendaniels/New-Tongwen-Tang
 }
 
