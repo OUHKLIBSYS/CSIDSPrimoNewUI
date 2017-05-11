@@ -2,25 +2,4 @@
 @media only screen and (max-width: 1023px) {
 
 /*Align feature.html for OU View main page*/
-    #OUHKHomeContainer {width:95vw ; padding-top:3em ;}
-    #OUHKHomeLeftColumn {width: 90vw ; top: 13px ; left: 5px ; right: 5px; position:relative;}
-    #OUHKHomeMiddleColumn {position:relative; left: 0vw; width:95vw;}
-    #OUHKHomeRightColumn {position:relative; top: 10px; width: 95vw;}
-    #OUHKHomeSchoolTable {width:95vw;}
-    #OUHKHomeSchoolTableTD {width:95vw;}
-    #OUHKHomeBannerTable {width: 95vw;}
-
-    #libraryLogo {
-       position: absolute;
-       left: 0px !important;
-       top: 32px !important;
-       height: 40%;
-    }
-
-    #instituteLogo {
-    position: absolute;
-    left: 0px !important;
-    top: 0px !important;
-    height: 60%;
-    }
 }
